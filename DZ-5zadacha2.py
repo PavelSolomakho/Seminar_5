@@ -3,20 +3,20 @@ import os
 
 
 welcome_text = ('Приветствую Вас, маленькие любители сладкого!\n'
-                'Хотите сыграть в игру "2021 шаг в сторону сахарного диабета"?\n'
+                'Хотите сыграть в игру "N шагов в сторону сахарного диабета"\n'
                 'Для начала я расскажу правила:\n'
-                'Я даю Вам 2021 конфету, вы берете их поочереди,\n'
+                'Я даю Вам N конфет, вы берете их поочереди,\n'
                 'причем, за один раз можно взять не больше 28 конфет.\n'
                 'Выигрывает тот, кто последним ходом заберет все конфеты.\n'
                 'Ну что начнем?')
 print(welcome_text)
 
 message = ['твоя очередь', 'да бери уже', 'бери больше', 'не корову проигрываешь',
-           'бери быстрее', 'да харош, так долго думать уже']
+           'бери быстрее', 'да сколько можно думать']
 
 
 def player_vs_player():
-    candies_total = 123
+    candies_total = 59
     max_take = 28
     count = 0
     player_1 = input('\nКак тебя зовут?: ')
@@ -69,7 +69,7 @@ player_vs_player()
 
 
 def player_vs_bot():
-    candies_total = 123
+    candies_total = 59
     max_take = 28
     player_1 = input('\nКак тебя зовут?: ')
     player_2 = 'Компьютер'
@@ -97,8 +97,8 @@ def player_vs_bot():
                     step = max_take - 1
                 if step == 0:
                     step = max_take
-            while step > 28 or step < 1:
-                step = randint(1, 28)
+            while step > 28 or step < 2:
+                step = randint(2, 28)
             print(step)
         else:
             step = int(input(
